@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./layouts/Header";
+import Content from "./layouts/Content";
+import { Box } from "rebass/styled-components";
+import Footer from "./layouts/Footer";
 
-function App() {
+const App = () => {
+  const [variant, setVariant] = React.useState("homePage");
+
+  const handleClick = () => {
+    setVariant("DetailPage");
+  }
+  
+  console.log(variant);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Box sx={{
+        marginTop: "-300px",
+      }}>
+      <Content variant={variant} handleClick={handleClick} />
+      </Box>
+      <Footer />
+      
+    </>
   );
-}
+};
 
 export default App;
