@@ -6,20 +6,13 @@ import { Box } from "rebass/styled-components";
 import Footer from "./layouts/Footer";
 
 const App = () => {
-  const [variant, setVariant] = React.useState("homePage");
-
-  const handleClick = () => {
-    setVariant("DetailPage");
-  }
-  
-  console.log(variant);
   return (
     <>
       <Header />
       <Box sx={{
         marginTop: "-300px",
       }}>
-      <Content variant={variant} handleClick={handleClick} />
+      <Content />
       </Box>
       <Footer />
       

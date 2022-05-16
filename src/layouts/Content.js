@@ -1,33 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import Detail from "../components/Detail";
 import Posts from "../components/Posts";
 
-const Content = ({ variant, handleClick }) => {
+const Content = () => {
   const [posts, setPosts] = useState([]);
- 
+
+
+
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts?_limit=6")
       .then((response) => response.json())
       .then((data) => setPosts(data));
   }, []);
-      
-  
-
 
   return (
-    <Container>
-      {variant === "homePage" && (
-        <>
-          <Posts handleClick={handleClick} posts={posts} />
-        </>
-      )}
-      {variant === "DetailPage" && (
-        <>
-          <Detail />
-        </>
-      )}
-    </Container>
+    <BrowserRouter>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Posts posts={posts} />} />
+          <Route path="/profile-details" element={<Detail />} />
+        </Routes>
+      </Container>
+    </BrowserRouter>
   );
 };
 

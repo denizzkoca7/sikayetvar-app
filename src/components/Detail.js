@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Box, Text } from "rebass/styled-components";
 import map from "../images/map.svg";
 
+
 const Detail = () => {
   return (
     <Flex flexDirection="column" padding={30}>
