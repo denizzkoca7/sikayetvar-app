@@ -3,7 +3,7 @@ import { Flex, Box, Text } from "rebass/styled-components";
 import map from "../images/map.svg";
 
 
-const Detail = () => {
+const Detail = ({user}) => {
   return (
     <Flex flexDirection="column" padding={30}>
       <Flex
@@ -15,23 +15,23 @@ const Detail = () => {
       >
         <Flex flexDirection="column">
           <Box>
-            <Text as="h1">Leanne Graham </Text>
-            <span>Gwenborough</span>
+            <Text as="h1">{user.name} </Text>
+            <span> {user.address ? user.address.city : ''} </span>
           </Box>
           <Flex className="user-list" mt={30}>
             <ul>
               <li>Username</li>
-              <li>Username</li>
-              <li>Username</li>
-              <li>Username</li>
-              <li>Username</li>
+              <li>Email</li>
+              <li>Phone</li>
+              <li>Website</li>
+              <li>Company</li>
             </ul>
             <ul>
-              <li>Bret</li>
-              <li>Bret</li>
-              <li>Bret</li>
-              <li>Bret</li>
-              <li>Bret</li>
+              <li>{user.username}</li>
+              <li>{user.email}</li>
+              <li>{user.phone}</li>
+              <li>{user.website}</li>
+              <li>{user.company && user.company.name}</li>
             </ul>
           </Flex>
         </Flex>
