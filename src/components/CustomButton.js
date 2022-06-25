@@ -19,7 +19,7 @@ const CustomButton = ({
         padding: "12px 21px",
         cursor: "pointer",
         fontWeight: fw || "bold",
-        transition: "all 0.3s ease-in-out",
+        transition: "all 0.2s",
         ":hover": {
           backgroundColor: hoverColor,
         },

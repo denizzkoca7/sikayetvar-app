@@ -44,6 +44,9 @@ const Container = styled(Flex)`
   height: 45vh;
   width: 100%;
   z-index: -1;
+  .post-link {
+    text-decoration: none;
+  }
 `;
 
 export default Header;
