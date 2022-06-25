@@ -7,11 +7,10 @@ import Posts from "../components/Posts";
 const Content = () => {
   const [posts, setPosts] = useState([]);
   const [user, setUser] = useState({});
-  const [currentPost, setCurrentPost] = useState({});
-
+  
   const fetchPosts = useCallback(async () => {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/posts?_limit=26"
+      "https://jsonplaceholder.typicode.com/posts?_limit=6"
     );
     const data = await response.json();
     setPosts(data);

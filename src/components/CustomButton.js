@@ -2,7 +2,7 @@
 import React from 'react'
 import { Button } from 'rebass/styled-components'
 
-const CustomButton = ({bgColor,hoverColor,title,textColor,fw,onClick}) => {
+const CustomButton = ({ bgColor,hoverColor,title,textColor,fw,onClick }) => {
   return (
     <Button
         variant="primary"
