@@ -1,7 +1,7 @@
 import React from "react";
 import PostItem from "./PostItem";
 
-const Posts = ({ posts,removePost }) => {
+const Posts = ({ posts,removePost,setPosts }) => {
   return (
         <>
           {posts.map((post) => (
@@ -9,6 +9,8 @@ const Posts = ({ posts,removePost }) => {
               key={post.id}
               post={post}
               removePost={removePost}
+              setPosts={setPosts}
+              posts={posts}
             />
           ))}
         </>

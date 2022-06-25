@@ -43,7 +43,7 @@ const Content = () => {
         <Routes>
           <Route
             path="/"
-            element={<Posts posts={posts} removePost={removePost} />}
+            element={<Posts posts={posts} removePost={removePost} setPosts={setPosts} />}
           />
           <Route path="/profile-details" element={<Detail user={user} />} />
         </Routes>

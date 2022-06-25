@@ -4,7 +4,7 @@ import CustomButton from "../components/CustomButton";
 import { Link } from "react-router-dom";
 import EditModal from "./EditModal";
 
-const PostItem = ({ post, removePost }) => {
+const PostItem = ({ post, removePost, setPosts, posts }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
 
@@ -19,7 +19,8 @@ const PostItem = ({ post, removePost }) => {
         <Flex flexDirection="row" justifyContent="space-between" width={1}>
           <Box>
             <p>
-              <span>{post.id}</span>
+              {post.id}
+              <span style={{marginLeft:"2px",marginRight:"2px"}}> - </span>
               {post.title}
             </p>
           </Box>
@@ -46,7 +47,13 @@ const PostItem = ({ post, removePost }) => {
           </Flex>
         </Flex>
       </Flex>
-      <EditModal post={post} toggleModal={toggleModal} isOpen={isOpen} />
+      <EditModal
+        post={post}
+        toggleModal={toggleModal}
+        isOpen={isOpen}
+        setPosts={setPosts}
+        posts={posts}
+      />
     </>
   );
 };
