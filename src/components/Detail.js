@@ -14,11 +14,11 @@ const Detail = ({ user }) => {
       >
         <Flex flexDirection="column">
           <Box>
-            <Text as="h1">{user.name} </Text>
-            <span> {user.address ? user.address.city : ""} </span>
+            <Text as="h1">{user.name}</Text>
+            <span style={{color:"#32325D", marginTop:"8px"}}> {user.address ? user.address.city : ""} </span>
           </Box>
           <Flex className="user-list" mt={30}>
-            <ul>
+            <ul className="description">
               <li>Username</li>
               <li>Email</li>
               <li>Phone</li>
@@ -29,7 +29,7 @@ const Detail = ({ user }) => {
               <li>{user.username}</li>
               <li>{user.email}</li>
               <li>{user.phone}</li>
-              <li>{user.website}</li>
+              <li><span style={{color:"#4A90E2"}}>{user.website}</span> </li>
               <li>{user.company && user.company.name}</li>
             </ul>
           </Flex>
@@ -38,14 +38,14 @@ const Detail = ({ user }) => {
           <img src={map} alt="map" />
         </Box>
       </Flex>
-      <Box padding="60px 100px" textAlign="center">
+      <Box padding="45px 100px" textAlign="center" color="#525F7F">
         <Text as="p" lineHeight={2} fontSize={16}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ea
           nostrum numquam officiis quas commodi dolores nobis eaque veniam quos
           impedit sit, eligendi architecto cum vitae minima suscipit cupiditate
           iure ratione asperiores rerum atque aperiam deserunt est.
         </Text>
-        <p style={{ textAlign: "center", color: "#4A90E2", display: "block" }}>
+        <p style={{ textAlign: "center", color: "#4A90E2", display: "block", marginTop:"20px" }}>
           Show More
         </p>
       </Box>

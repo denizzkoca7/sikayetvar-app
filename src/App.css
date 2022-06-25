@@ -12,8 +12,15 @@
   color: #fff;
 }
 .user-list ul {
-  margin: 0 25px;
+  margin: 0 25px 0 0 ;
+  padding-left: 0;
 }
 .user-list ul li {
-  padding: 10px 0;
+  padding: 3px 0;
+  font-weight: 500;
+  color: #525F7F;
+}
+
+.user-list .description li {
+  color: #8898AA
 }
