@@ -2,8 +2,7 @@ import React from "react";
 import { Flex, Box, Text } from "rebass/styled-components";
 import map from "../images/map.svg";
 
-
-const Detail = ({user}) => {
+const Detail = ({ user }) => {
   return (
     <Flex flexDirection="column" padding={30}>
       <Flex
@@ -16,7 +15,7 @@ const Detail = ({user}) => {
         <Flex flexDirection="column">
           <Box>
             <Text as="h1">{user.name} </Text>
-            <span> {user.address ? user.address.city : ''} </span>
+            <span> {user.address ? user.address.city : ""} </span>
           </Box>
           <Flex className="user-list" mt={30}>
             <ul>
@@ -40,13 +39,15 @@ const Detail = ({user}) => {
         </Box>
       </Flex>
       <Box padding="60px 100px" textAlign="center">
-        <Text as="p"   lineHeight={2} fontSize={16}>
+        <Text as="p" lineHeight={2} fontSize={16}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ea
           nostrum numquam officiis quas commodi dolores nobis eaque veniam quos
           impedit sit, eligendi architecto cum vitae minima suscipit cupiditate
           iure ratione asperiores rerum atque aperiam deserunt est.
         </Text>
-        <p style={{textAlign:"center", color:"#4A90E2", display:"block"}}>Show More</p>
+        <p style={{ textAlign: "center", color: "#4A90E2", display: "block" }}>
+          Show More
+        </p>
       </Box>
     </Flex>
   );

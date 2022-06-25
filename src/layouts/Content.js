@@ -7,7 +7,7 @@ import Posts from "../components/Posts";
 const Content = () => {
   const [posts, setPosts] = useState([]);
   const [user, setUser] = useState({});
-  
+
   const fetchPosts = useCallback(async () => {
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/posts?_limit=6"
@@ -37,7 +37,6 @@ const Content = () => {
     setPosts(delet);
   };
 
-  
   return (
     <BrowserRouter>
       <Container>

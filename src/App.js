@@ -9,13 +9,14 @@ const App = () => {
   return (
     <>
       <Header />
-      <Box sx={{
-        marginTop: "-300px",
-      }}>
-      <Content />
+      <Box
+        sx={{
+          marginTop: "-300px",
+        }}
+      >
+        <Content />
       </Box>
       <Footer />
-      
     </>
   );
 };

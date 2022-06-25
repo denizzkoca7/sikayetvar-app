@@ -12,7 +12,6 @@ import ModalHeader from "react-bootstrap/esm/ModalHeader";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const EditModal = ({ post, isOpen, toggleModal }) => {
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submit");
@@ -27,9 +26,20 @@ const EditModal = ({ post, isOpen, toggleModal }) => {
         </ModalHeader>
         <ModalBody>
           <FormLabel className="navy-text">Title</FormLabel>
-          <FormControl className="mb-3" type="text" name="title" placeholder={post.title} />
+          <FormControl
+            className="mb-3"
+            type="text"
+            name="title"
+            placeholder={post.title}
+          />
           <FormLabel className="navy-text">Body</FormLabel>
-          <FormControl className="mb-3" as="textarea" rows="5" name="body" placeholder={post.body} />
+          <FormControl
+            className="mb-3"
+            as="textarea"
+            rows="5"
+            name="body"
+            placeholder={post.body}
+          />
         </ModalBody>
         <ModalFooter>
           <button type="submit" className="btn btn-primary">

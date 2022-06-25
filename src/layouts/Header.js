@@ -21,9 +21,16 @@ const Header = () => {
       >
         <Flex width={1 / 6} alignItems="center" justifyContent="space-between">
           <img src={logo} alt="logo" />
-          <a href="/" className="post-link">Posts</a>
+          <a href="/" className="post-link">
+            Posts
+          </a>
         </Flex>
-        <CustomButton bgColor="#fffff" title="Login" textColor="#5E72E4" fw={300} />
+        <CustomButton
+          bgColor="#fffff"
+          title="Login"
+          textColor="#5E72E4"
+          fw={300}
+        />
       </Flex>
     </Container>
   );
